@@ -4,5 +4,10 @@ const RegisterUser = async (req, resp) => {
   let result = await userData.save();
   resp.send(result);
 };
-  
-export { RegisterUser };
+
+const LoginUser = async (req, res) => {
+  let data = await userModel.find();
+  res.send(data);
+};
+
+export { RegisterUser, LoginUser };
